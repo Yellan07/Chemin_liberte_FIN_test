@@ -4,6 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accéder à la fin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 200px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
     <script>
         function redirectToEnding() {
             let code = document.getElementById("codeInput").value;
@@ -21,8 +60,12 @@
     </script>
 </head>
 <body>
-    <h2>Entrez votre code pour accéder à la fin</h2>
-    <input type="text" id="codeInput" maxlength="6" placeholder="Entrez un code à 6 chiffres">
-    <button onclick="redirectToEnding()">Accéder à la fin</button>
+    <div class="container">
+        <h2>Entrez votre code pour accéder à la fin</h2>
+        <input type="text" id="codeInput" maxlength="6" placeholder="Entrez un code à 6 chiffres">
+        <br>
+        <button onclick="redirectToEnding()">Accéder à la fin</button>
+    </div>
 </body>
 </html>
+
