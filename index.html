@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accéder à la fin</title>
+    <script>
+        function redirectToEnding() {
+            let code = document.getElementById("codeInput").value;
+            let urls = {
+                "000070": "https://gdocs.com//000070.png",
+                "000000": "https://gdocs.com//000000.png"
+            };
+            
+            if (urls[code]) {
+                window.location.href = urls[code];
+            } else {
+                alert("Code invalide, veuillez réessayer.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Entrez votre code pour accéder à la fin</h2>
+    <input type="text" id="codeInput" maxlength="6" placeholder="Entrez un code à 6 chiffres">
+    <button onclick="redirectToEnding()">Accéder à la fin</button>
+</body>
+</html>
